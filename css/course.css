@@ -1,11 +1,11 @@
-html {
+html{
     background-color: rgb(245, 245, 245);
     font-family: Helvetica, sans-serif;
     font-size: 1rem;
    
 }
 
-:root {
+:root{
     --primary-color: darkorange;
     --secondary-color: rgb(245, 245, 245);
 }

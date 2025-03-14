@@ -29,10 +29,13 @@
                 <p>Sign Up</p>
                 <button class="login" aria-label="Login">Login</button>
                 <button class="hambmenu" aria-label="Dropdown Menu"><img src="./images/Icon.png" alt=""></button>
+                
             </div>
         </nav>
         <div class="banner">
+            
             <div class="unlock">
+                <!-- <img class="abs" src="./images/Abstract_Line.png" alt=""> -->
                 <img src="./images/Icon_Container.png" alt="Image of bolt">
                 <p><span>Unlock</span> Your Creative Potential</p>
             </div>
@@ -63,9 +66,19 @@
             <!-- video section  -->
         </section>
         <section class="video" aria-labelledby="video-section">
-            <h2 id="video-section" class="sr-only">Featured Video</h2>
-            <img src="./images/2.png" alt="Video thumbnail">
+            <div class="videoimg">
+            <picture>
+                <source srcset="images/video1.jpg" media="(max-width: 600px)">
+
+                <source srcset="images/video2.jpg" media="(max-width: 1024px)">
+
+                <source srcset="images/video3.jpg" media="(max-width: 1950px)">
+
+                <img src="./images/video.jpg" alt="placeholder">
+                
+               </picture>
             <button><img src="./images/Button.png" alt=""></button>
+        </div>
         </section>
 
         <!-- benefits section  -->

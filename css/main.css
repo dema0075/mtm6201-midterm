@@ -9,52 +9,83 @@ html {
     --secondary-color: rgb(245, 245, 245);
 }
 
-header a:hover{
+header a:hover {
     background-color: rgb(225, 225, 225);
 
 }
-button{
-    transition:  0.3s ease-in-out 0.01s;
+
+button {
+    transition: 0.3s ease-in-out 0.01s;
 }
-header button:hover{
+
+header button:hover {
     background-color: rgb(192, 81, 2);
 }
-main .brands img{
+
+main .brands img {
     transition: width 0.5s ease-in-out 0.1s;
 }
-main .brands img:hover{
+
+main .brands img:hover {
     width: 15%;
 }
 
-.title button:hover{
+.title button:hover {
     background-color: rgb(232, 232, 232);
 }
 
-.coursetitle button:hover{
+.coursetitle button:hover {
     background-color: rgb(232, 232, 232);
 }
 
-.ourtest button:hover{
+.ourtest button:hover {
     background-color: rgb(232, 232, 232);
 }
-.course button:hover{
+
+.course button:hover {
     background-color: var(--primary-color);
 }
-.alltest .testimonial .client button:hover{
+
+.alltest .testimonial .client button:hover {
     font-size: 0.75rem;
     background-color: white;
 }
-.plans .plantype button:hover{
+
+.plans .plantype button:hover {
     color: rgb(155, 155, 155);
     font-size: 1rem;
 }
 
-.faq .faqoption button:hover{
+.faq .faqoption button:hover {
     rotate: 90deg;
 }
 
-.benefits .kinds button:hover{
+.benefits .kinds button:hover {
     rotate: 90deg;
+}
+
+header .topbar p {
+    animation: colorimpact 0.6s ease-out infinite;
+}
+
+@keyframes colorimpact {
+    0% {
+        transform: scale(1);
+        color: #ffffff;
+        text-shadow: 0 0 5px rgba(29, 33, 35, 0.7);
+    }
+
+    50% {
+        transform: scale(1.1);
+        color: #f7ff02;
+        text-shadow: 0 0 20px rgba(78, 78, 2, 0.7);
+    }
+
+    100% {
+        transform: scale(1);
+        color: #035d28;
+        text-shadow: 0 0 10px rgba(46, 204, 113, 0.7);
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -82,6 +113,17 @@ main .brands img:hover{
         display: none;
     }
 
+    .hambmenu:hover {
+        background-color: var(--primary-color);
+        border-radius: 5px;
+    }
+
+    .hambmenu {
+        border-style: none;
+    }
+
+
+
     .login {
         background-color: var(--primary-color);
         padding: 1rem 2rem;
@@ -92,16 +134,12 @@ main .brands img:hover{
         border-style: none;
     }
 
-    .hambmenu {
-        border-style: none;
-        background-color: transparent;
-    }
 
     .navbar {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        
+
     }
 
     .navbar div {
@@ -128,12 +166,13 @@ main .brands img:hover{
         margin: 10px 0px 10px 10px;
         height: 40px;
     }
-    
+
     .unlock span {
         color: var(--primary-color);
 
     }
 
+    
     .banner {
         display: flex;
         flex-direction: column;
@@ -173,6 +212,7 @@ main .brands img:hover{
         line-height: 40px;
     }
 
+
     /* main section  */
     .brands {
         display: flex;
@@ -191,9 +231,10 @@ main .brands img:hover{
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .brands img:nth-child(3){
+
+    .brands img:nth-child(3) {
         border-right: none;
-      }
+    }
 
     .brands img:nth-child(4),
     .brands img:nth-child(5),
@@ -203,7 +244,7 @@ main .brands img:hover{
     }
 
     /* video section  */
-    .video {
+    picture {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -211,12 +252,20 @@ main .brands img:hover{
         margin-right: 10px;
     }
 
-    .video img {
-        border-radius: 10px;
+    .videoimg {
+        position: relative;
     }
 
-    .video button {
+    picture img {
+        border-radius: 8px;
+    }
+
+    .videoimg button {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
         background-color: transparent;
         border-style: none;
         align-self: center;
@@ -640,7 +689,7 @@ main .brands img:hover{
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
-   
+
     /* header section tablet  */
     .topbar {
         display: flex;
@@ -671,12 +720,15 @@ main .brands img:hover{
         font-size: 0.75rem;
         border-style: none;
     }
-    .navbar div p{
+
+    .navbar div p {
         font-size: 0.75rem;
     }
-    .navbar div{
-       margin-left: auto;
+
+    .navbar div {
+        margin-left: auto;
     }
+
     .hambmenu {
         display: none;
     }
@@ -689,12 +741,14 @@ main .brands img:hover{
         width: auto;
         padding: 0 2rem;
     }
-    .navbar ul{
+
+    .navbar ul {
         justify-content: space-evenly;
         font-size: 0.7rem;
         width: 45%;
     }
-    .navbar a{
+
+    .navbar a {
         text-decoration: none;
         color: black;
     }
@@ -710,7 +764,8 @@ main .brands img:hover{
         flex-direction: row;
         list-style: none;
     }
-    .menu a{
+
+    .menu a {
         padding: 0.5rem 1rem;
         border-radius: 5px;
     }
@@ -775,12 +830,14 @@ main .brands img:hover{
 
     /* brands banner tablet  */
 
-    main .brands img{
+    main .brands img {
         transition: width 0.5s ease-in-out 0.1s;
     }
-    main .brands img:hover{
+
+    main .brands img:hover {
         width: 15%;
-    } 
+    }
+
     .brands {
         display: flex;
         flex-direction: row;
@@ -806,12 +863,13 @@ main .brands img:hover{
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .brands img:nth-child(7){
-      border-right: none;
+
+    .brands img:nth-child(7) {
+        border-right: none;
     }
 
     /* video sectio tablet  */
-    .video {
+    picture {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -819,15 +877,23 @@ main .brands img:hover{
         margin-right: 10px;
     }
 
-    .video img {
+    picture img {
         border-radius: 10px;
     }
 
-    .video button {
+    .videoimg {
+        position: relative;
+    }
+
+    .videoimg button {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
         background-color: transparent;
         border-style: none;
-        align-self: center;
+
     }
 
     /* benefits css */
@@ -1172,6 +1238,7 @@ main .brands img:hover{
         flex-direction: row;
         justify-content: space-between;
     }
+
     /* types of plans  */
     .plans {
         display: grid;
@@ -1212,7 +1279,8 @@ main .brands img:hover{
         border-radius: 10px;
         background-color: var(--secondary-color);
     }
-    .plans .plantype p{
+
+    .plans .plantype p {
         text-align: center;
     }
 
@@ -1394,29 +1462,32 @@ main .brands img:hover{
         border-top: 1px solid var(--secondary-color);
         font-size: 0.75rem;
     }
-    footer section{
+
+    footer section {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-left: 1rem;
         margin-right: 2rem;
 
-        
+
     }
-    .contact{ 
+
+    .contact {
         margin-top: 1.5rem;
         padding-right: 6rem;
     }
 }
+
 @media screen and (min-width: 1024px) and (max-width: 1920px) {
-  
-    
- 
-   body{
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-   }
+
+
+
+    body {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
     /* header section tablet  */
     .topbar {
@@ -1448,12 +1519,15 @@ main .brands img:hover{
         font-size: 0.75rem;
         border-style: none;
     }
-    .navbar div p{
+
+    .navbar div p {
         font-size: 0.75rem;
     }
-    .navbar div{
-       margin-left: auto;
+
+    .navbar div {
+        margin-left: auto;
     }
+
     .hambmenu {
         display: none;
     }
@@ -1466,12 +1540,14 @@ main .brands img:hover{
         width: auto;
         padding: 0 3rem;
     }
-    .navbar ul{
+
+    .navbar ul {
         justify-content: space-evenly;
         font-size: 0.7rem;
         width: 35%;
     }
-    .navbar a{
+
+    .navbar a {
         text-decoration: none;
         color: black;
     }
@@ -1487,7 +1563,8 @@ main .brands img:hover{
         flex-direction: row;
         list-style: none;
     }
-    .menu a{
+
+    .menu a {
         padding: 0.5rem 1rem;
         border-radius: 5px;
     }
@@ -1552,12 +1629,14 @@ main .brands img:hover{
 
     /* brands banner tablet  */
 
-    main .brands img{
+    main .brands img {
         transition: width 0.5s ease-in-out 0.1s;
     }
-    main .brands img:hover{
+
+    main .brands img:hover {
         width: 15%;
     }
+
     .brands {
         display: flex;
         flex-direction: row;
@@ -1583,12 +1662,13 @@ main .brands img:hover{
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .brands img:nth-child(7){
+
+    .brands img:nth-child(7) {
         border-right: none;
-      }
+    }
 
     /* video sectio tablet  */
-    .video {
+    picture {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1596,15 +1676,23 @@ main .brands img:hover{
         margin-right: 10px;
     }
 
-    .video img {
+    picture img {
         border-radius: 10px;
     }
 
-    .video button {
+    .videoimg {
+        position: relative;
+    }
+
+    .videoimg button {
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
         background-color: transparent;
         border-style: none;
-        align-self: center;
+
     }
 
     /* benefits css */
@@ -1949,6 +2037,7 @@ main .brands img:hover{
         flex-direction: row;
         justify-content: space-between;
     }
+
     /* types of plans desktop */
     .plans {
         display: grid;
@@ -1999,7 +2088,8 @@ main .brands img:hover{
         width: 100%;
 
     }
-    .plans .plantype p{
+
+    .plans .plantype p {
         text-align: center;
     }
 
@@ -2163,8 +2253,9 @@ main .brands img:hover{
         display: flex;
         flex-direction: row;
     }
-    footer img{
-       width: 30%;
+
+    footer img {
+        width: 30%;
     }
 
     footer .links div {
@@ -2177,16 +2268,18 @@ main .brands img:hover{
         border-top: 1px solid var(--secondary-color);
         font-size: 0.75rem;
     }
-    footer section{
+
+    footer section {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-left: 1rem;
         margin-right: 2rem;
 
-        
+
     }
-    .contact{ 
+
+    .contact {
         margin-top: 1.5rem;
         padding-right: 6rem;
     }
